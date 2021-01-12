@@ -5,6 +5,8 @@
 #' @param DV Dependent Variable
 #'
 #' @return Data Frame of Mean, Standard Deviation, and N by each IV/Grouping Variable
+#'
+#' @export
 
 desc <- function(df, IV, DV) {
 
