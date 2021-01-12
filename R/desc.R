@@ -27,7 +27,7 @@ desc <- function(df, IV, DV) {
 
   # Use convert_to_factor function to ensure that
   # IV is a Factor Data Type
-  convert_to_factor(df, IV)
+  df <- convert_to_factor(df, IV)
 
   # Exclude incomplete rows
   df <- df[complete.cases(df), ]
