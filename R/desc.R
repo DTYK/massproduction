@@ -15,6 +15,20 @@ desc <- function(df, IV, DV) {
     stop("Data frame required. Please input data frame")
   }
 
+  # Test whether IV argument is present
+  if (missing(IV)) {
+    stop("IV missing. Please input IV")
+  }
+
+  # Test whether DV argument is present
+  if (missing(DV)) {
+    stop("DV missing. Please input DV")
+  }
+
+  # Use convert_to_factor function to ensure that
+  # IV is a Factor Data Type
+  convert_to_factor(df, IV)
+
   # Exclude incomplete rows
   df <- df[complete.cases(df), ]
 
