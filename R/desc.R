@@ -25,6 +25,9 @@ desc <- function(df, IV, DV) {
     stop("DV missing. Please input DV")
   }
 
+  # Ensure that df argument is a data frame
+  df <- as.data.frame(df)
+
   # Use convert_to_factor function to ensure that
   # IV is a Factor Data Type
   factor_df <- convert_to_factor(df, IV)
