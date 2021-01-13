@@ -30,19 +30,19 @@ desc <- function(df, IV, DV) {
 
   # Use convert_to_factor function to ensure that
   # IV is a Factor Data Type
-  factor_df <- convert_to_factor(df, IV)
+  df <- convert_to_factor(df, IV)
 
   # Exclude incomplete rows
-  complete_df <- factor_df[complete.cases(factor_df), ]
+  df <- df[complete.cases(df), ]
 
   # Obtain the Mean of the DV by each IV
-  mean_scores <- tapply(complete_df[, DV], complete_df[, IV], mean)
+  mean_scores <- tapply(df[, DV], df[, IV], mean)
 
   # Obtain the Standard Deviation of the DV by each IV
-  sd_scores <- tapply(complete_df[, DV], complete_df[, IV], sd)
+  sd_scores <- tapply(df[, DV], df[, IV], sd)
 
   # Obtain the Sample size of the DV by each IV
-  sample_size <- tapply(complete_df[, DV], complete_df[, IV], length)
+  sample_size <- tapply(df[, DV], df[, IV], length)
 
   # Combine the Mean scores, SDs, and Sample sizes by each IV
   # into a data frame
