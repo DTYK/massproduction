@@ -8,7 +8,7 @@
 #'
 #' @export
 
-desc <- function(df, IV, DV) {
+descriptives <- function(df, IV, DV) {
 
   # Test whether df argument is present
   if (missing(df)) {
