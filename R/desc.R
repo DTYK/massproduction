@@ -27,10 +27,10 @@ desc <- function(df, IV, DV) {
 
   # Use convert_to_factor function to ensure that
   # IV is a Factor Data Type
-  df <- convert_to_factor(df, IV)
+  factor_df <- convert_to_factor(df, IV)
 
   # Exclude incomplete rows
-  complete_df <- df[complete.cases(df), ]
+  complete_df <- factor_df[complete.cases(factor_df), ]
 
   # Obtain the Mean of the DV by each IV
   mean_scores <- tapply(complete_df[, DV], complete_df[, IV], mean)
