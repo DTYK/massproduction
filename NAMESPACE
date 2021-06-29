@@ -3,4 +3,5 @@
 export(anova)
 export(convert_to_factor)
 export(descriptives)
+export(tidyCol)
 importFrom(car,Anova)

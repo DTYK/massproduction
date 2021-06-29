@@ -33,3 +33,20 @@ convert_to_factor <- function(df, var) {
     return(df)
   }
 }
+
+#' Tidy up Column Names
+#'
+#' Tidy up Column Names by removing underscores (_) and
+#' periods (.) and replacing it with spaces ( ). Tidied column
+#' names could then be used in visualizations
+#'
+#' @param col Column Name
+#'
+#' @return A tidied column name
+#'
+#' @export
+
+# Create a function to tidy up column names
+tidyCol <- function(col) {
+  gsub("_", " ", col)
+}
